@@ -23,9 +23,14 @@ constructor     - should require the student name, studentNumber and grade (in t
 """
 
 class student:
-
+    name = ""
+    studentNumber = ""
+    grade = 0
+    honorwall = ""
     # properties should be listed first
-
+    
+    getCourse(self):
+        
     def __init__(): # You will need to create your own input parameters for all methods
         pass
 
