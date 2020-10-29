@@ -23,17 +23,37 @@ constructor     - should require the student name, studentNumber and grade (in t
 """
 
 class student:
+   name = ""
+   studentNumber = ""
+   grade = 0
+   courses = []
+   grades = []
 
+   def getCourses(self,courses):
+       self.courses = courses
+       return self.courses
+
+    def getGrades(self,grades):
+        self.grades = grades
+        return self.grades
+    
     # properties should be listed first
 
-    def __init__(): # You will need to create your own input parameters for all methods
-        pass
+    def __init__(self,name,studentNumber,grade): # You will need to create your own input parameters for all methods
+        self.name = name
+        self.studentNumber = studentNumber
+        self.grade = grade
+        print("The student nuam is " + self.name + "And the student number is " + self.studentNumber)
 
-    def __del__():
-        pass
+    def honorwall(self):
+        
+
+    def __del__(self):
+        print("Over.")
 
     def average(self):
-        pass
+         average = sum(self.grades) / len(self.grades)
+         return average
 
 def main():
     # This contains test data that will be used by the autograder.
