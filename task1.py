@@ -22,6 +22,7 @@ getGrades(list) - Receives a list of grades and stores that in the class propert
 constructor     - should require the student name, studentNumber and grade (in that order)
 """
 
+
 class student:
    name = ""
    studentNumber = ""
@@ -30,12 +31,16 @@ class student:
    grades = []
 
    def getCourses(self,courses):
-       self.courses = courses
-       return self.courses
+       global x
+       x = []
+       x = courses
+       return x
 
     def getGrades(self,grades):
-        self.grades = grades
-        return self.grades
+        global y
+        y = []
+        y = grades
+        return y
     
     # properties should be listed first
 
@@ -45,8 +50,14 @@ class student:
         self.grade = grade
         print("The student nuam is " + self.name + "And the student number is " + self.studentNumber)
 
-    def honorwall(self):
-        
+    def getHonorRoll(self):
+        a1 = 0
+        for v in range(0,len(y)):
+            a1 = a1 + y[v]
+        if a1 >= 86:
+            return True
+        else:
+            return False
 
     def __del__(self):
         print("Over.")
